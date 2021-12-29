@@ -1,180 +1,180 @@
 .hero {
-  height: 100vh;
-  min-height: 100vh;
-  position: relative;
-  transform-style: inherit;
-  width: 100vw;
-  overflow: hidden;
-  color: white;
-  text-align: center;
-  z-index: -1;
-  background-color: $nightblue;
+	height: 100vh;
+	min-height: 100vh;
+	position: relative;
+	transform-style: inherit;
+	width: 100vw;
+	overflow: hidden;
+	color: white;
+	text-align: center;
+	z-index: -1;
+	background-color: $nightblue;
 
-  h1,
-  h2 {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    line-height: 1;
-    opacity: 0.7;
-  }
+	h1,
+	h2 {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		line-height: 1;
+		opacity: 0.7;
+	}
 
-  h1 {
-    font-size: 5rem;
+	h1 {
+		font-size: 5rem;
 
-    @include breakpoint-up(medium) {
-      font-size: 7rem;
-    }
+		@include breakpoint-up(medium) {
+			font-size: 7rem;
+		}
 
-    @include breakpoint-up(large) {
-      font-size: 10rem;
-      letter-spacing: normal;
-    }
-  }
+		@include breakpoint-up(large) {
+			font-size: 10rem;
+			letter-spacing: normal;
+		}
+	}
 
-  h2 {
-    font-size: 1.875rem;
-    font-weight: 200;
+	h2 {
+		font-size: 1.875rem;
+		font-weight: 200;
 
-    @include breakpoint-up(medium) {
-      font-size: 2.225rem;
-    }
+		@include breakpoint-up(medium) {
+			font-size: 2.225rem;
+		}
 
-    @include breakpoint-up(large) {
-      font-size: 4rem;
-    }
-  }
+		@include breakpoint-up(large) {
+			font-size: 4rem;
+		}
+	}
 
-  &:before {
-    background: url('/src/images/bg-hero.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.6;
-    content: '';
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: -1;
-    min-height: 100vh;
-    will-change: transform;
-  }
-  &__main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
+	&:before {
+		background: url("dist/images/bg-hero.jpg") no-repeat center center;
+		background-size: cover;
+		opacity: 0.6;
+		content: "";
+		display: block;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: -1;
+		min-height: 100vh;
+		will-change: transform;
+	}
+	&__main {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .arrow {
-  z-index: 1000;
-  opacity: 0.5;
-  position: absolute;
+	z-index: 1000;
+	opacity: 0.5;
+	position: absolute;
 
-  &--top {
-    top: 0;
-    left: -5em;
-  }
+	&--top {
+		top: 0;
+		left: -5em;
+	}
 
-  &--bottom {
-    bottom: 0;
-    right: 3em;
-  }
+	&--bottom {
+		bottom: 0;
+		right: 3em;
+	}
 }
 
 .dotted-circle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.3;
-  animation: rotation 38s linear infinite;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.3;
+	animation: rotation 38s linear infinite;
 }
 
 // animations
 .draw-in {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 10;
-  animation: draw 15s ease-in-out alternate infinite;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 10;
+	animation: draw 15s ease-in-out alternate infinite;
 }
 
 @keyframes draw {
-  from {
-    stroke-dashoffset: 1000;
-  }
+	from {
+		stroke-dashoffset: 1000;
+	}
 
-  to {
-    stroke-dashoffset: 0;
-  }
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 .item-to {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
 }
 
 .bounce-1 {
-  animation-name: bounce-1;
-  animation-timing-function: ease;
+	animation-name: bounce-1;
+	animation-timing-function: ease;
 }
 
 .bounce-2 {
-  animation-name: bounce-2;
-  animation-timing-function: ease;
+	animation-name: bounce-2;
+	animation-timing-function: ease;
 }
 
 .bounce-3 {
-  animation-name: bounce-3;
-  animation-timing-function: ease;
+	animation-name: bounce-3;
+	animation-timing-function: ease;
 }
 
 @keyframes bounce-1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(50px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes bounce-2 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes bounce-3 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(30px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 // gradient fade
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
