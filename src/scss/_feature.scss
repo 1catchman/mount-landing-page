@@ -1,0 +1,45 @@
+.feature {
+  background-color: $warmgray;
+  color: $coolgray;
+  font-weight: 400;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include breakpoint-up(large) {
+      flex: 1 0 48%;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    left: -2rem;
+    bottom: -2.5rem;
+  }
+
+  &__title {
+    font-size: $font-lg;
+    line-height: 1.15;
+    color: $nightblue;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  &__description {
+    font-size: $font-md;
+    line-height: 1.5;
+    margin-bottom: 1.875rem;
+  }
+}
+
+.services {
+  background-color: $nightblue;
+  color: $warmgray;
+
+  .feature__title {
+    color: $powderblue;
+  }
+}

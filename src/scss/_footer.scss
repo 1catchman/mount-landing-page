@@ -1,0 +1,27 @@
+.footer {
+  background-color: $coolgray;
+  color: $warmgray;
+
+  &__menu {
+    ul {
+      padding: 0;
+      margin-top: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      &::after {
+        all: initial;
+      }
+      &:hover::after {
+        all: initial;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: $font-sm;
+    padding: 6px;
+  }
+}

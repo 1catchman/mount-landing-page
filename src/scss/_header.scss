@@ -1,0 +1,65 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  background-color: $coolgray;
+
+  a {
+    color: $warmgray;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__logo {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &__menu {
+    margin: 0;
+
+    @include breakpoint-down(small) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+
+      li {
+        padding: 6px;
+
+        a {
+          position: relative;
+          display: block;
+          padding: 4px 0;
+          transition: 0.5s;
+          font-size: $font-sm;
+
+          &::after {
+            position: absolute;
+            content: '';
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: $nightblue;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+          }
+
+          &:hover {
+            color: $powderblue;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}
